@@ -1,0 +1,37 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+/**
+ * Chickens lay eggs and have names.
+ * 
+ * @author Omaima
+ */
+
+public class Chicken extends Actor
+{
+    private String name;
+
+    public void act() 
+    {
+        move(1);
+        
+        if ( isAtEdge() )
+        {
+            Egg egg = new Egg();
+            int x = getX();
+            int y = getY();
+            
+            getWorld().addObject(egg, x, y);
+        }
+    }
+    
+    public void setName(String newName)
+    {
+        name = newName;
+    }
+    
+    public void layEgg(int x, int y)
+    {
+        Egg egg = new Egg();
+        getWorld().addObject(egg, x, y);
+    }
+}
