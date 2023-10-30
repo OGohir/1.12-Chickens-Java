@@ -1,0 +1,33 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+public class Chicken extends Actor
+{
+    private String name;
+    
+    public void act() 
+    {
+        move(1);
+    }
+    
+    public void fly(int distance)
+    {
+        move(distance);
+    }
+    
+    public void flyLeft(int distance)
+    {
+        turn(-90);
+        move(distance);
+    }
+    
+    public void flyRight(int distance)
+    {
+        turn(90);
+        move(distance);
+    }
+    
+    public void setName(String newName)
+    {
+        name = newName;
+    }
+}
